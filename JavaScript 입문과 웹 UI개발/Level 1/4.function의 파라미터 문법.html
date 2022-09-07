@@ -1,0 +1,71 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="alert-box" id="alert">
+        <p id="title">알림창</p>
+        <button onclick="알림창열기('none');">닫기</button>
+    </div>
+    <button onclick="아이디알림창('아이디입력하셈')">버튼1</button>
+    <button onclick="아이디알림창('비번입력하셈')">버튼2</button>
+
+
+    <script>
+        function 알림창열기(a) {
+            document.getElementById('alert').style.display = a;
+        }
+
+        알림창열기('block');
+        알림창열기('none');
+
+        // 1.p태크 내용을 아이디 입력으로 바꿈 2. 띄움 
+        // function 아이디알림창() {
+        //     document.getElementById('title').innerHTML = '아이디입력하셈';
+        //     document.getElementById('alert').style.display = 'block';
+        // }
+
+        // function 비번알림창() {
+        //     document.getElementById('title').innerHTML = '비번입력하셈';
+        //     document.getElementById('alert').style.display = 'block';
+        // }
+        function 아이디알림창(i) {
+            document.getElementById('title').innerHTML = i;
+            document.getElementById('alert').style.display = 'block';
+        }
+
+
+
+
+
+        function plus(i) {
+            2 + i
+        }
+
+        plus(1);
+        plus(2);
+
+
+
+
+
+
+
+
+
+        // function 알림창열기() {
+        //     document.getElementById('alert').style.display = 'block';
+        // }
+        // function 알림창닫기() {
+        //     document.getElementById('alert').style.display = 'none';
+        // }
+    </script>
+</body>
+
+</html>
