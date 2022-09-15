@@ -110,16 +110,22 @@
       // console.log(어레이);
       // console.log(어레이2);
 
-      for (i = 0; i < products.length; i++) {
+      products.forEach((a, i) => {
         document.querySelector('.row').insertAdjacentHTML(
           'beforeend',
           `<div class="col-sm-4">
                 <img src="https://via.placeholder.com/600" class="w-100">
                 <h5>${products[i].title}</h5>
                 <p>가격 : ${products[i].price}</p>
+                <button class="buy">구매</button>
                 </div>`
         );
-      }
+      });
+      let arr1 = [1, 2, 3];
+      let newarr1 = JSON.stringify(arr1);
+
+      localStorage.setItem('num', newarr1);
+      let 꺼낸거 = localStorage.getItem('num');
     </script>
     <div class="container my-3">
       <button class="btn btn-danger" id="price">가격순 정렬</button>
@@ -159,6 +165,7 @@
                 <img src="https://via.placeholder.com/600" class="w-100">
                 <h5>${a.title}</h5>
                 <p>가격 : ${a.price}</p>
+                <button class="buy">구매</button>
                 </div>`
                 );
               });
@@ -175,6 +182,7 @@
                 <img src="https://via.placeholder.com/600" class="w-100">
                 <h5>${a.title}</h5>
                 <p>가격 : ${a.price}</p>
+                <button class="buy">구매</button>
                 </div>`
                 );
               });
@@ -198,6 +206,7 @@
                 <img src="https://via.placeholder.com/600" class="w-100">
                 <h5>${products[i].title}</h5>
                 <p>가격 : ${products[i].price}</p>
+                <button class="buy">구매</button>
                 </div>`
           );
         });
@@ -223,6 +232,7 @@
                 <img src="https://via.placeholder.com/600" class="w-100">
                 <h5>${products[i].title}</h5>
                 <p>가격 : ${products[i].price}</p>
+                <button class="buy">구매</button>
                 </div>`
           );
         });
@@ -243,6 +253,7 @@
                 <img src="https://via.placeholder.com/600" class="w-100">
                 <h5>${new1[i].title}</h5>
                 <p>가격 : ${new1[i].price}</p>
+                <button class="buy">구매</button>
                 </div>`
           );
         });
